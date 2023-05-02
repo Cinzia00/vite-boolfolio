@@ -1,7 +1,7 @@
 <template>
-  <div class="project-card">
-    <h3>{{ projects.title }}</h3>
-    ciao
+  <div class="card">
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.description }}</p>
   </div>
 </template>
 
@@ -21,4 +21,8 @@
 
 <style scoped>
 
+
+.card {
+  width:calc((100% / 4) - 2rem);
+}
 </style>

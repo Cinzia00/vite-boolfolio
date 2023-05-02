@@ -9,11 +9,10 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <div>
     <Projects />
   </div>
 </template>
 
 <style scoped>
-
 </style>

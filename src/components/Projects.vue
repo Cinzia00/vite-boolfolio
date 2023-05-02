@@ -1,9 +1,11 @@
 <script>
 import axios from 'axios'
-import Projectcard from './Projectcard.vue'
+import CardProject from './CardProject.vue'
 
 export default {
-
+components:{
+  CardProject
+},
     data() {
       return {
         projects: [],
@@ -15,7 +17,7 @@ export default {
             .then(res => {
                 console.log(res)
 
-                const { results} = res.data
+                const { results } = res.data
                 this.projects = results
             })
             .catch(err => {
@@ -30,12 +32,17 @@ export default {
 </script>
 
 <template>
-    <div>
-        <Projectcard v-for="project in projects" :key="project.id"/>
-    </div>
-
+  <div class="container">
+      <CardProject v-for="project in projects" :key="project.id" :project="project"/>
+  </div>
 </template>
 
 <style scoped>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem;
+}
 
 </style>
