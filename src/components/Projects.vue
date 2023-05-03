@@ -32,9 +32,10 @@ components:{
 </script>
 
 <template>
-  <div class="container">
-      <CardProject v-for="project in projects" :key="project.id" :project="project"/>
-  </div>
+  <h1 class="title">Boolfolio</h1>
+    <div class="container">
+        <CardProject v-for="project in projects" :key="project.id" :project="project"/>
+    </div>
 </template>
 
 <style scoped>
@@ -43,6 +44,11 @@ components:{
   flex-wrap: wrap;
   gap: 1rem;
   margin: 2rem;
+}
+
+.title {
+  text-align: center;
+  margin-top: 2rem;
 }
 
 </style>
