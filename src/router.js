@@ -6,8 +6,8 @@ import Chi_sono from './pages/Chi_sono.vue'
 
 
 const router = createRouter({
-	history,
-	routes: [
+	history: createWebHistory(),
+		routes: [
 		{
 			path: '/',
 			name: 'home',
