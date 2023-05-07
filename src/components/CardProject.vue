@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <h3>{{ project.title }}</h3>
+    <router-link :to="{name: 'projects.show', params:{slug:project.slug}}"><h3>{{ project.title }}</h3></router-link>
     <p>{{ project.description }}</p>
   </div>
 </template>
